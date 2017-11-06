@@ -1,0 +1,27 @@
+---
+title: "IMU+ML"
+author: "Junqi Zhao"
+date: "11/4/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Data Segmentation
+```{r}
+imudata=read.csv(file = "Acce.csv",header=TRUE)
+#set the "window" size "n" seconds by setting segmentation lables
+#add a lable colum onto the current dataframe
+imudata[,5]=NA
+colnames(imudata)=c("elapsed","x", "y","z","window")
+t=1 #setting window size as t seconds
+#determine the number of total windows "n"
+n=(floor(imudata$elapsed[nrow(imudata)])+1)/t
+for (i in 1:n)
+  {
+  if
+}
+
+```
